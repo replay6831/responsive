@@ -308,9 +308,12 @@
 						<p class="col_desc">CSS3의 transform을 이용한 마우스 오버효과입니다.</p>
 						<!-- side1 -->
 						<div class="side1">
-                            <figure>
+                            <figure class="front">
                                 <img src="img/side1.jpg" alt="이미지2" width="100%">
                             </figure>
+                            <div class="back">
+                                <i class="fa fa-heart fa-4x" aria-hidden="true"></i>
+                            </div>
                         </div>
                         <!-- side1//-->
                     </article>
@@ -321,8 +324,17 @@
 						<p class="col_desc">CSS3의 transform을 이용한 마우스 오버효과입니다.</p>
 						<!-- side2 -->
 						<div class="side2">
-                            <figure>
+                            <figure class="front">
                                 <img src="img/side2.jpg" alt="이미지2" width="100%">
+                                <figcaption>
+                                    <h3>Hover Effect</h3>
+                                </figcaption>
+                            </figure >
+                            <figure class="back">
+                                <img src="img/side4.jpg" alt="이미지2" width="100%">
+                                <figcaption>
+                                    <h3>Hover Effect</h3>
+                                </figcaption>
                             </figure>
                         </div>
                         <!-- side2//-->
@@ -335,8 +347,11 @@
 						<!-- side3 -->
 						<div class="side3">
                             <figure>
-                                <img src="img/side3.jpg" alt="이미지2" width="100%">
-                            </figure>
+                                <img src="img/side3.jpg" alt="이미지3" width="100%">
+                                <figcaption>
+                                    <h3>Hover<em>Effect</em></h3>
+                                </figcaption>
+                            </figure> 
                         </div>
                         <!-- side3//-->
                     </article>
@@ -393,6 +408,13 @@
             } else {
                 //open이 없을 때
                 $(".btn").find(">i").attr("class","fa fa-angle-down");
+            }
+        });
+
+        $(window).resize(function(){
+            var wWidth = $(window).width();
+            if(wWidth > 600){
+                $(".nav").removeAttr("style");
             }
         });
 
